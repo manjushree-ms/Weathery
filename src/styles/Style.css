@@ -1,0 +1,87 @@
+.partone-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: var(--neon-shadow);
+  color: var(--text-color);
+}
+
+.weather-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.weather-image {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.weather-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--neon-shadow);
+}
+
+.location h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.desc, .coord {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.coord p {
+  margin: 5px 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.card-box {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: var(--neon-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.card-box i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--accent);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s infinite;
+}

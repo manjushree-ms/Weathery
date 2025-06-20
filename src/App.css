@@ -1,0 +1,95 @@
+:root {
+  --bg-color: #0a0f2c;
+  --text-color: #ffffff;
+  --accent: #00fff7;
+  --card-bg: #111739;
+  --neon-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  background-color: #101a40;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--neon-shadow);
+}
+.header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--accent);
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 250px;
+  height: 40px;
+  background-color: transparent;
+  box-shadow: var(--neon-shadow);
+}
+
+.searchbar button {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.searchbar button:hover {
+  font-size: 20px;
+  color: white;
+}
+
+.searchbar input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.settings {
+  display: flex;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--accent);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s infinite;
+}
